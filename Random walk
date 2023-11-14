@@ -1,0 +1,18 @@
+#Random walk
+import numpy as np
+import matplotlib.pyplot as plt
+N=29
+dd=[]
+b=0
+dd1=[]
+for i in range(10000):
+	a=np.random.choice([1,-1],size=N)
+	s=np.sum(a)**2
+	dd.append(s)
+	b=b+dd[i]
+	av=b/(i+1)
+	dd1.append(av)
+plt.plot(dd1)
+plt.show()
+
+	
